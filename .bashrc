@@ -1,6 +1,6 @@
-# ===========================
-# ==== Sys env variables ====
-# ===========================
+# =======================================
+# ==== Ubtuntu environment variables ====
+# =======================================
 
 # Colorize terminal
 eval `dircolors ~/.dir_colors`
@@ -38,7 +38,7 @@ if ! shopt -oq posix; then
 fi
 
 
-# Set gcc / clang / python / make highlighting
+# Command highlighting (e.g., gcc, clang, python, make)
 #gcc() {
 #  exec "$(which gcc)" "$@" |& ~/.highlight.sh
 #}
@@ -59,9 +59,12 @@ fi
 #  exec "$(which make)" "$@" |& ~/.highlight.sh
 #}
 
-# ===========================
-# === LLVM env variables ==== 
-# ===========================
+
+
+
+# ===================================
+# === LLVM environment variables ==== 
+# ===================================
 
 export PATH=/home/bastoica/llvm39/build/bin:$PATH
 #export PATH=$PATH:/home/bastoica/depot_tools:/home/bastoica/llvm-36-build/Release+Asserts/bin
@@ -75,7 +78,9 @@ export PATH=/home/bastoica/llvm39/build/bin:$PATH
 export DS_LIB_PATH=/home/bastoica/llvm-36-build/Release+Asserts/lib/libLLVMDFlowProfiling.so
 export DS_LIB_DBG_PATH=/home/bastoica/llvm_build/Release+Asserts/lib/libLLVMDFlowProfilingDbg.so
 export PP_LIB_PATH=/home/bastoica/llvm_build/Release+Asserts/lib/libLLVMCFlowProfiling.so
+
 #source /home/bastoica/llvm_scripts/prepare_build_env.sh
+
 #export CC=$(which clang)
 #export CXX=$(which clang++)
 #export CFLAGS=""
