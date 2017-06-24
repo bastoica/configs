@@ -1,0 +1,36 @@
+[user]
+	name = Bogdan-Alexandru Stoica
+	email = bogdan.stoica@epfl.ch
+
+[color]
+	diff = auto
+	status = auto
+	brach = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+    
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+[push]
+	default = simple
+[core]
+	editor = emacs -nw
