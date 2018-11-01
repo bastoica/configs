@@ -1,1 +1,1 @@
-# Environment and cofiguration files
+# Environment and configuration files
