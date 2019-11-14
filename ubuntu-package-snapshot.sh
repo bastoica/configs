@@ -14,8 +14,8 @@ deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe
 sudo tee -a /etc/apt/sources.list.d/ddebs.list
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 428D7C01 C8CAB6595FDFF622
 sudo apt-get update
-sudo apt-get install linux-headers-$(uname -r)
-sudo apt-get install linux-image-$(uname -r)-dbgsym
+sudo apt-get install -y linux-headers-$(uname -r)
+sudo apt-get install -y linux-image-$(uname -r)-dbgsym
 
 
 # Install packages
@@ -103,12 +103,5 @@ sudo apt-get install -y zlib1g-dev
 byobu-enable
 
 
-# Set up Vim environment
-sudo mkdir -p /usr/share/vim/colors
-sudo wget -P /usr/share/vim/colors/ https://raw.githubusercontent.com/lod/desert.vim/master/colors/desert.vim
-echo "set expandtab ts=4 sw=4 ai nu" | sudo tee -a /usr/share/vim/vimrc
-echo "colorscheme desert" | sudo tee -a /usr/share/vim/vimrc
-
-
 # Reset session to enable updates
-logout
+logout || exit
