@@ -89,10 +89,11 @@ map  <C-n> :tabnew<CR>
 
 
 " Setup custom color scheme
-
 set background=dark
 set t_Co=256
 colorscheme desert256
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
+" Hotkey to clear search highlighting
+nmap <C-c> :let @/=""<cr><cr>
