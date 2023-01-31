@@ -3,19 +3,7 @@
 
 # Update Ubuntu package list
 sudo apt-get install -y software-properties-common
-sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-3.9 main"
 sudo apt-get update
-
-
-# Install debug symbols
-echo "deb http://ddebs.ubuntu.com $(lsb_release -cs) main restricted universe multiverse
-deb http://ddebs.ubuntu.com $(lsb_release -cs)-updates main restricted universe multiverse
-deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe multiverse" | \
-sudo tee -a /etc/apt/sources.list.d/ddebs.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 428D7C01 C8CAB6595FDFF622
-sudo apt-get update
-sudo apt-get install -y linux-headers-$(uname -r)
-sudo apt-get install -y linux-image-$(uname -r)-dbgsym
 
 
 # Install packages
